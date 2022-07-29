@@ -101,9 +101,9 @@
     </build>
     <packaging>jar</packaging>
 
-    <name>Simple Java Task Library</name>
+    <name>Simple Java Task  </name>
     <description>just a simple library for making it easy to create and manage tasks both in single threaded and multithreaded applications</description>
-    <url>https://github.com/omzz15/Task</url>
+    <url>https://github.com/omzz15/Task/src</url>
 
     <licenses>
         <license>

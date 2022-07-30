@@ -15,7 +15,7 @@ public abstract class NamedKeyedStructure<NAME, K, V> extends KeyedStructure<K, 
     NAME name;
 
     /**
-     * 1
+     * default constructor
      */
     public NamedKeyedStructure(){}
 

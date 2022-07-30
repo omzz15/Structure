@@ -11,7 +11,7 @@ public abstract class Structure<T> {
     private T parent;
 
     /**
-     * 1
+     * default constructor
      */
     public Structure(){}
 

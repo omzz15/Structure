@@ -12,7 +12,7 @@ public abstract class KeyedStructure <K, V> extends Structure<V>{
     private K parentKey;
 
     /**
-     * 1
+     * default constructor
      */
     public KeyedStructure(){}
 

@@ -101,9 +101,9 @@
     </build>
     <packaging>jar</packaging>
 
-    <name>Simple Java Task  </name>
-    <description>just a simple library for making it easy to create and manage tasks both in single threaded and multithreaded applications</description>
-    <url>https://github.com/omzz15/Task/src</url>
+    <name>Simple Java library to help with creating structures</name>
+    <description>just a simple library for making it easy to create and manage structures for other classes</description>
+    <url>https://github.com/omzz15/Structure</url>
 
     <licenses>
         <license>
@@ -124,9 +124,9 @@
     </distributionManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/omzz15/Task.git</connection>
-        <developerConnection>scm:git:ssh://github.com:omzz15/Task.git</developerConnection>
-        <url>https://github.com/omzz15/Task</url>
+        <connection>scm:git:git://github.com/omzz15/Structure.git</connection>
+        <developerConnection>scm:git:ssh://github.com:omzz15/Structure.git</developerConnection>
+        <url>https://github.com/omzz15/Structure</url>
     </scm>
 
     <developers>

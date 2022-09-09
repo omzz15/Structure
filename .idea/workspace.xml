@@ -5,15 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="migrated structure code from Task to stand-alone library">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/BidirectionalStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/KeyedBidirectionalStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/child/ChildContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/child/ChildStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/child/KeyedChildStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/parent/KeyedParentStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/parent/ParentContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/base/parent/ParentStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/ChildStructureImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/KeyedChildStructureImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/ParentStructureImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/KeyedStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/KeyedStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedKeyedStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedKeyedStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/Structure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/Structure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/KeyedStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/KeyedParentStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedKeyedStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedKeyedParentStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/Structure.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,17 +51,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Development/Projects/MavenLibrary/Structure/src/main/java/om/self/structure"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dromp/Downloads/openid&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Development\Projects\MavenLibrary\Structure\src\main\java\om\self\structure" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Example" />
+      <module name="Structure" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Example" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659139998528</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="migrated structure code from Task to stand-alone library">
+      <created>1659185981133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659185981133</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,5 +135,16 @@
     <MESSAGE value="created project" />
     <MESSAGE value="migrated structure code from Task to stand-alone library" />
     <option name="LAST_COMMIT_MESSAGE" value="migrated structure code from Task to stand-alone library" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Example.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

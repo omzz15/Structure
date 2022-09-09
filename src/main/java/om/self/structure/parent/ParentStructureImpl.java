@@ -1,12 +1,10 @@
-package om.self.structure.implementation;
-
-import om.self.structure.base.parent.ParentStructure;
+package om.self.structure.parent;
 
 /**
  * basic structure class that stores a parent of type T and has abstract methods for after a parent is attached and before a parent is detached
  * @param <T> the type of the parent object
  */
-public abstract class ParentStructureImpl<T> implements ParentStructure<T> {
+public class ParentStructureImpl<T> implements ParentStructure<T> {
     /**
      * The parent that the object extending this structure is attached to.
      */

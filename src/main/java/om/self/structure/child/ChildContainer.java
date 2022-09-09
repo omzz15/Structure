@@ -1,4 +1,4 @@
-package om.self.structure.base.child;
+package om.self.structure.child;
 
 import java.util.Collection;
 

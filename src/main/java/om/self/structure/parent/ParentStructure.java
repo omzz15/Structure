@@ -1,4 +1,4 @@
-package om.self.structure.base.parent;
+package om.self.structure.parent;
 
 public interface ParentStructure<T> extends ParentContainer<T> {
     /**
@@ -12,11 +12,11 @@ public interface ParentStructure<T> extends ParentContainer<T> {
      * method that is called when a parent is attached or changed.
      * @param parent the parent that is being attached
      */
-    void onParentAttach(T parent);
+    default void onParentAttach(T parent){}
 
     /**
      * method that is called when a parent is detached.
      * @param parent the parent that is being detached
      */
-    void onParentDetach(T parent);
+    default void onParentDetach(T parent){}
 }

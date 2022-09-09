@@ -1,11 +1,11 @@
-package om.self.structure.base;
+package om.self.structure.bidirectional;
 
-import om.self.structure.base.parent.ParentStructure;
-import om.self.structure.base.child.ChildStructure;
+import om.self.structure.parent.ParentStructure;
+import om.self.structure.child.ChildStructure;
 
 import java.util.*;
 
-public abstract class BidirectionalStructure<PARENT extends ChildStructure, CHILD extends ParentStructure> implements ChildStructure<CHILD>, ParentStructure<PARENT> {
+public class BidirectionalStructure<PARENT extends ChildStructure, CHILD extends ParentStructure> implements ChildStructure<CHILD>, ParentStructure<PARENT> {
     private PARENT parent;
     private final Set<CHILD> children = new HashSet<>();
 

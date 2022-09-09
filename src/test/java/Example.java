@@ -1,4 +1,4 @@
-import om.self.structure.base.BidirectionalStructure;
+import om.self.structure.bidirectional.BidirectionalStructure;
 
 public class Example {
     public static void main(String[] args) {

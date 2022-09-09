@@ -1,6 +1,4 @@
-package om.self.structure.base.child;
-
-import java.util.Collection;
+package om.self.structure.child;
 
 public interface ChildStructure<T> extends ChildContainer<T> {
     /**
@@ -31,7 +29,6 @@ public interface ChildStructure<T> extends ChildContainer<T> {
      * @param child the child that is being attached
      */
     default void onChildAttach(T child) {}
-
 
     /**
      * method that is called before a child is detached.

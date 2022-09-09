@@ -1,12 +1,12 @@
-package om.self.structure.base;
+package om.self.structure.bidirectional;
 
-import om.self.structure.base.child.KeyedChildStructure;
-import om.self.structure.base.parent.KeyedParentStructure;
+import om.self.structure.child.KeyedChildStructure;
+import om.self.structure.parent.KeyedParentStructure;
 
 import java.util.Hashtable;
 import java.util.Map;
 
-public abstract class KeyedBidirectionalStructure<K, PARENT extends KeyedChildStructure, CHILD extends KeyedParentStructure> implements KeyedChildStructure<K, CHILD>, KeyedParentStructure<K, PARENT> {
+public class KeyedBidirectionalStructure<K, PARENT extends KeyedChildStructure, CHILD extends KeyedParentStructure> implements KeyedChildStructure<K, CHILD>, KeyedParentStructure<K, PARENT> {
     private K parentKey;
     private PARENT parent;
     private final Hashtable<K, CHILD> children = new Hashtable<>();

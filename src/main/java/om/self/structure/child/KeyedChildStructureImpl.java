@@ -1,11 +1,11 @@
-package om.self.structure.implementation;
+package om.self.structure.child;
 
-import om.self.structure.base.child.KeyedChildStructure;
+import om.self.structure.child.KeyedChildStructure;
 
 import java.util.Hashtable;
 import java.util.Map;
 
-public abstract class KeyedChildStructureImpl<K, V> implements KeyedChildStructure<K, V> {
+public class KeyedChildStructureImpl<K, V> implements KeyedChildStructure<K, V> {
     private final Hashtable<K, V> children = new Hashtable<>();
 
     @Override
@@ -18,6 +18,11 @@ public abstract class KeyedChildStructureImpl<K, V> implements KeyedChildStructu
     public void detachChild(K key) {
         if(!isChildKeyAttached(key)) return;
         onChildDetach(key, children.remove(key));
+    }
+
+    @Override
+    public void detachChildren() {
+        children.clear();
     }
 
     @Override

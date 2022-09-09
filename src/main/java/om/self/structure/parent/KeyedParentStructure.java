@@ -1,4 +1,4 @@
-package om.self.structure.base.parent;
+package om.self.structure.parent;
 
 public interface KeyedParentStructure<K, V> extends ParentContainer<V> {
     void attachParent(K key, V parent);
@@ -17,5 +17,5 @@ public interface KeyedParentStructure<K, V> extends ParentContainer<V> {
      * @param key the key of the parent being detached
      * @param parent the parent that is being detached
      */
-    void onParentDetach(K key, V parent);
+    default void onParentDetach(K key, V parent){}
 }

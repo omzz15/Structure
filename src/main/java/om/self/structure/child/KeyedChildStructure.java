@@ -1,4 +1,4 @@
-package om.self.structure.base.child;
+package om.self.structure.child;
 
 import java.util.Collection;
 import java.util.Map;
@@ -57,12 +57,12 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
      * @param key the key of the child
      * @param child the child that is being attached
      */
-    void onChildAttach(K key, V child);
+    default void onChildAttach(K key, V child){}
 
     /**
      * method that is called before a child is detached.
      * @param key the key of the child
      * @param child the child that is being detached
      */
-    void onChildDetach(K key, V child);
+    default void onChildDetach(K key, V child){}
 }

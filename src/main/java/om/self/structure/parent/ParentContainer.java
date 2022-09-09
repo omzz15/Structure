@@ -1,4 +1,4 @@
-package om.self.structure.base.parent;
+package om.self.structure.parent;
 
 public interface ParentContainer<T> {
     /**

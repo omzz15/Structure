@@ -1,6 +1,6 @@
-package om.self.structure.implementation;
+package om.self.structure.child;
 
-import om.self.structure.base.child.ChildStructure;
+import om.self.structure.child.ChildStructure;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
  * basic structure class that stores children of type T and has abstract methods for after a child is attached and before a child is detached
  * @param <T> the type of the child object
  */
-public abstract class ChildStructureImpl<T> implements ChildStructure<T> {
+public class ChildStructureImpl<T> implements ChildStructure<T> {
     /**
      * The children that are associated with this object.
      */
@@ -51,5 +51,10 @@ public abstract class ChildStructureImpl<T> implements ChildStructure<T> {
     public void detachChild(T child){
         if (children.remove(child))
             onChildDetach(child);
+    }
+
+    @Override
+    public void detachChildren() {
+        children.clear();
     }
 }

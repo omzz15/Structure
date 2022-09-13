@@ -1,7 +1,5 @@
 package om.self.structure.child;
 
-import om.self.structure.child.ChildStructure;
-
 import java.util.HashSet;
 import java.util.Set;
 

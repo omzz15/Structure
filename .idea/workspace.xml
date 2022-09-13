@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="updated generics of BidirectionalStructure and KeyedBidirectionalStructure so parent and child can be any type.">
+    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="added KeyedChildStructure.getChild(key) to directly get child">
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dromp/Downloads/openid&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Development/Plaforms/Java/Library/Structure/src/main/java/om/self",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Development\Plaforms\Java\Library\Structure\src\main\java\om\self" />
       <recent name="C:\Development\Projects\MavenLibrary\Structure\src\main\java\om\self\structure" />
     </key>
   </component>
@@ -119,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663033373441</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added KeyedChildStructure.getChild(key) to directly get child">
+      <created>1663080808733</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663080808733</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +156,7 @@
     <MESSAGE value="new version with restructure and new base classes" />
     <MESSAGE value="refactored code" />
     <MESSAGE value="updated generics of BidirectionalStructure and KeyedBidirectionalStructure so parent and child can be any type." />
-    <option name="LAST_COMMIT_MESSAGE" value="updated generics of BidirectionalStructure and KeyedBidirectionalStructure so parent and child can be any type." />
+    <MESSAGE value="added KeyedChildStructure.getChild(key) to directly get child" />
+    <option name="LAST_COMMIT_MESSAGE" value="added KeyedChildStructure.getChild(key) to directly get child" />
   </component>
 </project>

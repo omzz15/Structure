@@ -1,7 +1,6 @@
 package om.self.structure.parent;
 
-import om.self.structure.parent.KeyedParentStructure;
-import om.self.structure.parent.ParentStructureImpl;
+import om.self.structure.NamedStructure;
 
 /**
  * A more advanced structure class that keeps all the functionality of {@link ParentStructureImpl} but requires a key for identification purposes like HashTable lookups
@@ -20,6 +19,7 @@ public class KeyedParentStructureImpl<K, V> implements KeyedParentStructure<K, V
 
     @Override
     public void attachParent(K key, V parent) {
+        if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
         if(isParentAttached()) detachParent();
 
         onParentAttach(key, parent);

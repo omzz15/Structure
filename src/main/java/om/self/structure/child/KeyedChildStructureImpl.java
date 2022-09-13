@@ -1,7 +1,5 @@
 package om.self.structure.child;
 
-import om.self.structure.child.KeyedChildStructure;
-
 import java.util.Hashtable;
 import java.util.Map;
 
@@ -10,6 +8,7 @@ public class KeyedChildStructureImpl<K, V> implements KeyedChildStructure<K, V> 
 
     @Override
     public void attachChild(K key, V child) {
+        if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
         if(children.put(key, child) != child)
             onChildAttach(key, child);
     }

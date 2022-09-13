@@ -1,5 +1,6 @@
 package om.self.structure.bidirectional;
 
+import om.self.structure.NamedStructure;
 import om.self.structure.child.KeyedChildStructure;
 import om.self.structure.parent.KeyedParentStructure;
 
@@ -13,6 +14,7 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
 
     @Override
     public void attachChild(K key, CHILD child) {
+        if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
         if(children.put(key, child) == child) return;
 
         if(child instanceof KeyedParentStructure<?,?>)((KeyedParentStructure)child).attachParent(key, this);
@@ -41,6 +43,7 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
 
     @Override
     public void attachParent(K key, PARENT parent) {
+        if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
         if(isParentAttached()) detachParent();
 
         if(parent instanceof KeyedChildStructure<?,?>)((KeyedChildStructure)parent).attachChild(key,this);

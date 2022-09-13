@@ -1,5 +1,7 @@
 package om.self.structure.child;
 
+import om.self.structure.NamedStructure;
+
 import java.util.Collection;
 import java.util.Map;
 

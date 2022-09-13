@@ -5,7 +5,7 @@ import om.self.structure.child.ChildStructure;
 
 import java.util.*;
 
-public class BidirectionalStructure<PARENT extends ChildStructure, CHILD extends ParentStructure> implements ChildStructure<CHILD>, ParentStructure<PARENT> {
+public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHILD>, ParentStructure<PARENT> {
     private PARENT parent;
     private final Set<CHILD> children = new HashSet<>();
 
@@ -13,7 +13,7 @@ public class BidirectionalStructure<PARENT extends ChildStructure, CHILD extends
     public void attachChild(CHILD child) {
         if(!children.add(child)) return;
 
-        child.attachParent(this);
+        if(child instanceof ParentStructure<?>)((ParentStructure)child).attachParent(this);
         onChildAttach(child);
     }
 
@@ -21,7 +21,7 @@ public class BidirectionalStructure<PARENT extends ChildStructure, CHILD extends
     public void detachChild(CHILD child) {
         if(!children.remove(child)) return;
 
-        child.detachParent();
+        if(child instanceof ParentStructure<?>)((ParentStructure<?>)child).detachParent();
         onChildDetach(child);
     }
 
@@ -42,7 +42,7 @@ public class BidirectionalStructure<PARENT extends ChildStructure, CHILD extends
 
         if(isParentAttached()) detachParent();
         this.parent = parent;
-        parent.attachChild(this);
+        if(parent instanceof ChildStructure<?>) ((ChildStructure)parent).attachChild(this);
         onParentAttach(parent);
     }
 
@@ -52,7 +52,7 @@ public class BidirectionalStructure<PARENT extends ChildStructure, CHILD extends
 
         PARENT parent = this.parent;
         this.parent = null;
-        parent.detachChild(this);
+        if(parent instanceof ChildStructure<?>) ((ChildStructure)parent).detachChild(this);
         onParentDetach(parent);
     }
 

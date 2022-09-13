@@ -6,7 +6,7 @@ import om.self.structure.parent.KeyedParentStructure;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class KeyedBidirectionalStructure<K, PARENT extends KeyedChildStructure, CHILD extends KeyedParentStructure> implements KeyedChildStructure<K, CHILD>, KeyedParentStructure<K, PARENT> {
+public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChildStructure<K, CHILD>, KeyedParentStructure<K, PARENT> {
     private K parentKey;
     private PARENT parent;
     private final Hashtable<K, CHILD> children = new Hashtable<>();
@@ -15,7 +15,7 @@ public class KeyedBidirectionalStructure<K, PARENT extends KeyedChildStructure, 
     public void attachChild(K key, CHILD child) {
         if(children.put(key, child) == child) return;
 
-        child.attachParent(key, this);
+        if(child instanceof KeyedParentStructure<?,?>)((KeyedParentStructure)child).attachParent(key, this);
         onChildAttach(key, child);
     }
 
@@ -24,7 +24,7 @@ public class KeyedBidirectionalStructure<K, PARENT extends KeyedChildStructure, 
         if(!isChildKeyAttached(key)) return;
 
         CHILD child = children.remove(key);
-        child.detachParent();
+        if(child instanceof KeyedParentStructure<?,?>)((KeyedParentStructure)child).detachParent();
         onChildDetach(key, child);
     }
 
@@ -43,7 +43,7 @@ public class KeyedBidirectionalStructure<K, PARENT extends KeyedChildStructure, 
     public void attachParent(K key, PARENT parent) {
         if(isParentAttached()) detachParent();
 
-        parent.attachChild(key, this);
+        if(parent instanceof KeyedChildStructure<?,?>)((KeyedChildStructure)parent).attachChild(key,this);
         onParentAttach(key, parent);
         this.parentKey = key;
         this.parent = parent;
@@ -53,7 +53,7 @@ public class KeyedBidirectionalStructure<K, PARENT extends KeyedChildStructure, 
     public void detachParent() {
         if(!isParentAttached()) return;
 
-        parent.detachChild(parentKey);
+        if(parent instanceof KeyedChildStructure<?,?>)((KeyedChildStructure)parent).detachChild(parentKey);
         onParentDetach(parentKey, parent);
         parentKey = null;
         parent = null;

@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="new version with restructure and new base classes">
+    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="refactored code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedKeyedParentStructureImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/BidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/KeyedBidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/child/ChildContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/child/ChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/child/KeyedChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/parent/KeyedParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/parent/ParentContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/base/parent/ParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/ChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/KeyedChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/KeyedParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/implementation/ParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662745246783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactored code">
+      <created>1662758794056</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662758794056</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +134,7 @@
     <MESSAGE value="migrated structure code from Task to stand-alone library" />
     <MESSAGE value="new version" />
     <MESSAGE value="new version with restructure and new base classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="new version with restructure and new base classes" />
+    <MESSAGE value="refactored code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored code" />
   </component>
 </project>

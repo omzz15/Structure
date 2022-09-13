@@ -44,6 +44,15 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
     Map<K, V> getChildrenAndKeys();
 
     /**
+     * gets a child associated with a specific key
+     * @param key the key of the child
+     * @return will return the child or null if the key is not found
+     */
+    default V getChild(K key){
+        return getChildrenAndKeys().get(key);
+    }
+
+    /**
      * checks whether a child is attached based on the key
      * @param key the key of the child you want to check
      * @return if the child is attached

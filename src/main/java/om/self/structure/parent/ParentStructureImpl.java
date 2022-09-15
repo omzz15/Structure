@@ -40,7 +40,8 @@ public class ParentStructureImpl<T> implements ParentStructure<T> {
     public void attachParent(T parent) {
         if(this.parent == parent) return;
 
-        if(isParentAttached()) detachParent();
+        detachParent();
+
         onParentAttach(parent);
         this.parent = parent;
     }

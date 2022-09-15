@@ -8,14 +8,15 @@ public class KeyedChildStructureImpl<K, V> implements KeyedChildStructure<K, V> 
 
     @Override
     public void attachChild(K key, V child) {
-        if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
-        if(children.put(key, child) != child)
-            onChildAttach(key, child);
+        if(children.put(key, child) == child) return;
+
+        onChildAttach(key, child);
     }
 
     @Override
     public void detachChild(K key) {
         if(!isChildKeyAttached(key)) return;
+
         onChildDetach(key, children.remove(key));
     }
 

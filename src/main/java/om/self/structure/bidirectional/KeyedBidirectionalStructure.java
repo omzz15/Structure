@@ -44,12 +44,14 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
     @Override
     public void attachParent(K key, PARENT parent) {
         if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
+        if(key == parentKey && parent == this.parent) return;
+
         if(isParentAttached()) detachParent();
 
-        if(parent instanceof KeyedChildStructure<?,?>)((KeyedChildStructure)parent).attachChild(key,this);
-        onParentAttach(key, parent);
         this.parentKey = key;
         this.parent = parent;
+        if(parent instanceof KeyedChildStructure<?,?>)((KeyedChildStructure)parent).attachChild(key,this);
+        onParentAttach(key, parent);
     }
 
     @Override

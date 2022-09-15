@@ -20,7 +20,9 @@ public class KeyedParentStructureImpl<K, V> implements KeyedParentStructure<K, V
     @Override
     public void attachParent(K key, V parent) {
         if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
-        if(isParentAttached()) detachParent();
+        if(key == parentKey && parent == parent) return;
+
+        detachParent();
 
         onParentAttach(key, parent);
         this.parentKey = key;

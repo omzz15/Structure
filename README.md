@@ -32,7 +32,7 @@ To install with Maven:
     ```
     implementation 'io.github.omzz15:supplier:1.1.1-RELEASE'
     ``` 
-    *Note: the version numbers may not line up, but they are the same version
+    *Note: the version numbers may not line up, but they are the same version. For more information check out the ftc_master branch
   - For other platforms or to use different versions, check out Maven Central: https://central.sonatype.dev/artifact/io.github.omzz15/supplier/1.2.3-RELEASE/versions
 3. Enjoy :)
 

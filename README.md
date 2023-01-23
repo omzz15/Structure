@@ -25,15 +25,15 @@ To install with Maven:
     <dependency>
       <groupId>io.github.omzz15</groupId>
       <artifactId>supplier</artifactId>
-      <version>1.2.3-RELEASE</version>
+      <version>2.0.7-RELEASE</version>
     </dependency>
     ```
   - There is also an FTC version (using java 8 instead of 18) you can add to grade using:
     ```
-    implementation 'io.github.omzz15:supplier:1.1.1-RELEASE'
+    implementation 'io.github.omzz15:supplier:2.0.7-RELEASE'
     ``` 
     *Note: the version numbers may not line up, but they are the same version. For more information check out the ftc_master branch
-  - For other platforms or to use different versions, check out Maven Central: https://central.sonatype.dev/artifact/io.github.omzz15/supplier/1.2.3-RELEASE/versions
+  - For other platforms or to use different versions, check out Maven Central: https://central.sonatype.dev/artifact/io.github.omzz15/supplier/2.0.7-RELEASE/versions
 3. Enjoy :)
 
 # How To Use

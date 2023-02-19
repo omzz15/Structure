@@ -10,31 +10,34 @@ A simple java library that provides a way to manage trees of children and parent
 - Generally allows for a simpler way to implement structures rather than writing boilerplate code.
 - Use generics to keep code efficient and restrict what can be a child/parent.
 
-### Future Additions
+## Future Additions
 - System to restrict what can be added to a structure(adding parent/child) based on conditions.
 - Community Requests(your input is always important)
 
 # How To Install
-Currently, this library is only available on Maven Central, but I might also compile binaries and put them as releases on Git Hub.
+**Warning: A some older versions have breaking changes so freely switching between versions may not be possible. Any version after 2.0.0 should be cross compatible and I will use a new version number(3.0.0) when there are breaking changes.
 
-To install with Maven:
-1. In your project, make sure you can get libraries from Maven Central(maven projects should automatically have this, but you can search how to do this online if it's not there)
-2. Add this library as a dependency
-  - For Maven, put this in the dependencies section in your pom.xml: 
-    ```
-    <dependency>
+There are multiple ways to use this library, but it was primarily made for Maven/Gradle so that will be the most up to date. There will also be releases on GitHub, but I would recommend using Maven.
+
+## To Install with Maven:
+1. In your project, make sure you can get libraries from Maven Central(This should be automatically available in maven projects)
+2. Add the library to the project(by default it should be in the dependencies section of pom.xml)
+   ```
+   <dependency>
       <groupId>io.github.omzz15</groupId>
       <artifactId>supplier</artifactId>
       <version>2.0.7-RELEASE</version>
-    </dependency>
-    ```
-  - There is also an FTC version (using java 8 instead of 18) you can add to grade using:
+   </dependency>
+   ```
+
+## To Install with Gradle
+1. Add the mavenCentral() repository to the repositories section(it should be in build.gradle by default)
+2. Add the library to the gradle using:
     ```
     implementation 'io.github.omzz15:supplier:2.0.7-RELEASE'
-    ``` 
-    *Note: the version numbers may not line up, but they are the same version. For more information check out the ftc_master branch
-  - For other platforms or to use different versions, check out Maven Central: https://central.sonatype.dev/artifact/io.github.omzz15/supplier/2.0.7-RELEASE/versions
-3. Enjoy :)
+    ```
+Enjoy :)
 
 # How To Use
-Check out the example code in src/test/java
+Check examples
+

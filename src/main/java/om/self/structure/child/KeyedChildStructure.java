@@ -3,6 +3,12 @@ package om.self.structure.child;
 import java.util.Collection;
 import java.util.Map;
 
+/**
+ * An extention of {@link ChildContainer} that uses keys for identification and adds the ability to attach and detach children, plus methods that get called on attach and detach.
+ * @param <K> the type of the key used to identify itself to its parent
+ * @param <V> the type of the children
+ * @see ChildContainer
+ */
 public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
     /**
      * method used to attach a child

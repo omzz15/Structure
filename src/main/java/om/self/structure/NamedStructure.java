@@ -1,5 +1,6 @@
 package om.self.structure;
 
+
 public interface NamedStructure<K>{
     K getName();
 

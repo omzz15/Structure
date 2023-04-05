@@ -1,7 +1,7 @@
 package om.self.structure.child;
 
 /**
- * An extention of {@link ChildContainer} that adds the ability to attach and detach children, plus methods that get called on attach and detach.
+ * An extension of {@link ChildContainer} that adds the ability to attach and detach children, plus methods that get called on attach and detach.
  * @param <T> the type of the children
  * @see ChildContainer
  */

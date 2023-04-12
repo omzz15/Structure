@@ -1,8 +1,9 @@
 package om.self.structure.parent;
 
 /**
- * basic structure class that stores a parent of type T and has abstract methods for after a parent is attached and before a parent is detached
- * @param <T> the type of the parent object
+ * An implementation of {@link ParentStructure} that automatically calls {@link ParentStructure#onParentAttach(Object)} and {@link ParentStructure#onParentDetach(Object)} when a parent is attached or detached.
+ * @param <T> the type of the parent
+ * @see ParentStructure
  */
 public class ParentStructureImpl<T> implements ParentStructure<T> {
     /**

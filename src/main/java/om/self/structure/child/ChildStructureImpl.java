@@ -35,22 +35,4 @@ public class ChildStructureImpl<T> implements ChildStructure<T> {
     public Set<T> getChildren() {
         return children;
     }
-
-    /**
-     * Attaches a child and calls {@link ChildStructure#onChildAttach(Object)}
-     * @param child The child being attached
-     */
-    public void attachChild(T child) {
-        if (children.add(child))
-            onChildAttach(child);
-    }
-
-    /**
-     * Detaches a child and calls {@link ChildStructure#onChildDetach(Object)}
-     * @param child The child being detached
-     */
-    public void detachChild(T child){
-        if (children.remove(child))
-            onChildDetach(child);
-    }
 }

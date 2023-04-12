@@ -1,5 +1,7 @@
 package om.self.structure.child;
 
+//v1 complete
+
 /**
  * An extension of {@link ChildContainer} that adds the ability to attach and detach children, plus methods that get called on attach and detach.
  * @param <T> the type of the children
@@ -9,9 +11,12 @@ public interface ChildStructure<T> extends ChildContainer<T> {
     /**
      * Attaches a child.
      * @param child The child being attached
-     * @implNote Make sure this method calls {@link ChildStructure#onChildAttach(Object)}
+     * @implNote This method should call {@link ChildStructure#onChildAttach(Object)}
      */
-    void attachChild(T child);
+    default void attachChild(T child){
+        if(getChildren().add(child))
+            onChildAttach(child);
+    }
 
     /**
      * Attaches multiple children by calling {@link ChildStructure#attachChild(Object)}.
@@ -25,16 +30,28 @@ public interface ChildStructure<T> extends ChildContainer<T> {
     /**
      * Detaches a child.
      * @param child The child being detached
-     * @implNote Make sure this method calls {@link ChildStructure#onChildDetach(Object)}
+     * @implNote This method should call {@link ChildStructure#onChildDetach(Object)}
      */
-    void detachChild(T child);
+    default void detachChild(T child){
+        if(getChildren().remove(child))
+            onChildDetach(child);
+    };
 
     /**
-     * Detaches multiple children by calling {@link ChildStructure#attachChild(Object)}.
+     * Detaches multiple children by calling {@link ChildStructure#detachChild(Object)}.
      * @param children The children being attached
      */
     default void detachChildren(Iterable<T> children){
         for (T child: children)
+            detachChild(child);
+    }
+
+    /**
+     * Detaches all children by calling {@link ChildStructure#detachChild(Object)}
+     */
+    @Override
+    default void detachChildren() {
+        for (T child: getChildren())
             detachChild(child);
     }
 

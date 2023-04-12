@@ -1,5 +1,11 @@
 package om.self.structure.parent;
 
+/**
+ * An extension of {@link ParentContainer} that adds the ability to attach and detach parents, plus methods that get called on attach and detach.
+ * @param <T> the type of the parent
+ * @see ParentContainer
+ */
+
 public interface ParentStructure<T> extends ParentContainer<T> {
     /**
      * method used to attach a parent

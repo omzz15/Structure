@@ -32,8 +32,8 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
         if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
         if(children.put(key, child) == child) return;
 
-        if(child instanceof KeyedParentStructure structure) structure.attachParent(key, this);
-        if(child instanceof ParentStructure structure) structure.attachParent(this);
+        if(child instanceof KeyedParentStructure) ((KeyedParentStructure) child).attachParent(key, this);
+        if(child instanceof ParentStructure) ((ParentStructure) child).attachParent(this);
 
         onChildAttach(key, child);
     }
@@ -47,9 +47,11 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
         if(!isChildKeyAttached(key)) return;
 
         CHILD child = children.remove(key);
-        if(child instanceof ParentContainer<?> container)
+        if(child instanceof ParentContainer) {
+            ParentContainer<?> container = (ParentContainer<?>) child;
             if (container.getParent() == this)
                 container.detachParent();
+        }
 
         onChildDetach(key, child);
     }
@@ -78,8 +80,8 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
         this.parentKey = key;
         this.parent = parent;
 
-        if(parent instanceof KeyedChildStructure structure) structure.attachChild(key,this);
-        if(parent instanceof ChildStructure structure) structure.attachChild(this);
+        if(parent instanceof KeyedChildStructure) ((KeyedChildStructure) parent).attachChild(key,this);
+        if(parent instanceof ChildStructure) ((ChildStructure) parent).attachChild(this);
 
         onParentAttach(key, parent);
     }
@@ -91,8 +93,8 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
     public void detachParent() {
         if(!isParentAttached()) return;
 
-        if(parent instanceof KeyedChildStructure structure) structure.detachChild(parentKey);
-        if(parent instanceof ChildStructure structure) structure.detachChild(this);
+        if(parent instanceof KeyedChildStructure) ((KeyedChildStructure) parent).detachChild(parentKey);
+        if(parent instanceof ChildStructure) ((ChildStructure) parent).detachChild(this);
 
         onParentDetach(parentKey, parent);
         parentKey = null;

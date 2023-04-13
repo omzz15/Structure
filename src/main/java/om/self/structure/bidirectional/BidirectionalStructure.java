@@ -33,7 +33,7 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
         if(!children.add(child)) return;
 
         try{
-            if(child instanceof ParentStructure structure) structure.attachParent(this);
+            if(child instanceof ParentStructure) ((ParentStructure) child).attachParent(this);
         }
         catch(Exception e){
 
@@ -49,7 +49,8 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
     public void detachChild(CHILD child) {
         if(!children.remove(child)) return;
 
-        if(child instanceof ParentContainer<?> container) {
+        if(child instanceof ParentContainer<?>) {
+            ParentContainer<?> container = (ParentContainer<?>) child;
             if (container.getParent() == this)
                 container.detachParent();
         }
@@ -76,7 +77,7 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
 
         if(isParentAttached()) detachParent();
         this.parent = parent;
-        if(parent instanceof ChildStructure structure) structure.attachChild(this);
+        if(parent instanceof ChildStructure) ((ChildStructure) parent).attachChild(this);
         onParentAttach(parent);
     }
 
@@ -89,7 +90,7 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
 
         PARENT parent = this.parent;
         this.parent = null;
-        if(parent instanceof ChildStructure structure) structure.detachChild(this);
+        if(parent instanceof ChildStructure) ((ChildStructure) parent).detachChild(this);
         onParentDetach(parent);
     }
 

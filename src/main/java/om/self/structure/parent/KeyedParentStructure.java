@@ -1,19 +1,37 @@
 package om.self.structure.parent;
 
+//v1 complete
+
+/**
+ * An extension of {@link ParentContainer} that adds the ability to attach a parent with a key(for identification), plus methods that get called on attach and detach.
+ * @param <K> the type of the key
+ * @param <V> the type of the parent
+ * @see ParentContainer
+ */
 public interface KeyedParentStructure<K, V> extends ParentContainer<V> {
+    /**
+     * Attaches a parent.
+     * @param key the key associated with the parent
+     * @param parent the parent being attached
+     * @implNote This method should call {@link ParentStructure#onParentAttach(Object)}
+     */
     void attachParent(K key, V parent);
 
+    /**
+     * Gets the key of the attached parent.
+     * @return the key of attached parent, null if no parent is attached
+     */
     K getParentKey();
 
     /**
-     * method that is called when a parent is attached or changed.
-     * @param key the key of the parent
+     * Called when a parent is attached or changed.
+     * @param key the key of the parent being attached
      * @param parent the parent that is being attached
      */
     default void onParentAttach(K key, V parent){}
 
     /**
-     * method that is called when a parent is detached.
+     * Called when a parent is detached.
      * @param key the key of the parent being detached
      * @param parent the parent that is being detached
      */

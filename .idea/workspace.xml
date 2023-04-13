@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681408114827</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="finished all initial docs">
+      <created>1681410195335</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681410195335</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +212,7 @@
     <MESSAGE value="added some examples" />
     <MESSAGE value="worked on docs" />
     <MESSAGE value="finished initial docs for child and parent packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished initial docs for child and parent packages" />
+    <MESSAGE value="finished all initial docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished all initial docs" />
   </component>
 </project>

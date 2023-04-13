@@ -1,5 +1,5 @@
 # Java Structures
-This is a FTC specific version that runs on java 8. For more info check the main branch.
+This is a FTC specific version that runs on java 8. For more info check the master branch.
 
 # Install
 I would recommend using Maven or gradle for FTC projects.

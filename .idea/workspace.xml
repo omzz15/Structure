@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="added some examples">
+    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureImpl.java" afterDir="false" />
@@ -168,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674242506978</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="worked on docs">
+      <created>1681297491461</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681297491461</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +207,7 @@
     <MESSAGE value="some slight changes to safety checks" />
     <MESSAGE value="updated docs" />
     <MESSAGE value="added some examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some examples" />
+    <MESSAGE value="worked on docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on docs" />
   </component>
 </project>

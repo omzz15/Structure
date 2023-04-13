@@ -8,10 +8,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHILD>, ParentStructure<PARENT> {
-    private FailureAction parentAttachFailureAction = FailureAction.IGNORE;
-    private FailureAction parentDetachFailureAction = FailureAction.IGNORE;
-    private FailureAction childAttachFailureAction = FailureAction.IGNORE;
-    private FailureAction childDetachFailureAction = FailureAction.IGNORE;
+//    private FailureAction parentAttachFailureAction = FailureAction.IGNORE;
+//    private FailureAction parentDetachFailureAction = FailureAction.IGNORE;
+//    private FailureAction childAttachFailureAction = FailureAction.IGNORE;
+//    private FailureAction childDetachFailureAction = FailureAction.IGNORE;
     
     private PARENT parent;
     private final Set<CHILD> children = new HashSet<>();
@@ -74,8 +74,8 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
         return parent;
     }
 
-    public enum FailureAction{
-        THROW_EXCEPTION,
-        IGNORE
-    }
+//    public enum FailureAction{
+//        THROW_EXCEPTION,
+//        IGNORE
+//    }
 }

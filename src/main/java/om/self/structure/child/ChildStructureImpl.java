@@ -1,7 +1,10 @@
 package om.self.structure.child;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+
+//v1 complete
 
 /**
  * An implementation of {@link ChildStructure} that uses a {@link HashSet} to store the children.
@@ -32,7 +35,5 @@ public class ChildStructureImpl<T> implements ChildStructure<T> {
      * @return Attached children
      */
     @Override
-    public Set<T> getChildren() {
-        return children;
-    }
+    public Collection<T> getChildren() {return children;}
 }

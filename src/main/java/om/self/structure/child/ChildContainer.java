@@ -14,6 +14,7 @@ public interface ChildContainer<T> {
     /**
      * Gets all attached children
      * @return Attached children
+     * @implNote In order for the default implementations of methods such as {@link ChildContainer#detachChildren()} to work, this must return a reference(pointer) to the child collection(not a copy).
      */
     Collection<T> getChildren();
 

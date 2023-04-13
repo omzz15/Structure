@@ -39,7 +39,7 @@ public interface ChildStructure<T> extends ChildContainer<T> {
 
     /**
      * Detaches multiple children by calling {@link ChildStructure#detachChild(Object)}.
-     * @param children The children being attached
+     * @param children The children being detached
      */
     default void detachChildren(Iterable<T> children){
         for (T child: children)

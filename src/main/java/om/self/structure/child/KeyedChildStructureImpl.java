@@ -3,28 +3,34 @@ package om.self.structure.child;
 import java.util.Hashtable;
 import java.util.Map;
 
+//v1 complete
+
+/**
+ * An implementation of {@link KeyedChildStructure} that uses a {@link Hashtable} to store the children.
+ * @param <K> the type of the key
+ * @param <V> the type of the children
+ * @see KeyedChildStructure
+ */
 public class KeyedChildStructureImpl<K, V> implements KeyedChildStructure<K, V> {
     private final Hashtable<K, V> children = new Hashtable<>();
 
-    @Override
-    public void attachChild(K key, V child) {
-        if(children.put(key, child) == child) return;
+    /**
+     * Default constructor
+     */
+    public KeyedChildStructureImpl(){}
 
-        onChildAttach(key, child);
+    /**
+     * Constructor that automatically attaches children
+     * @param children the children to attach
+     */
+    public KeyedChildStructureImpl(Map<K,V> children){
+        attachChildren(children);
     }
 
-    @Override
-    public void detachChild(K key) {
-        if(!isChildKeyAttached(key)) return;
-
-        onChildDetach(key, children.remove(key));
-    }
-
-    @Override
-    public void detachChildren() {
-        children.clear();
-    }
-
+    /**
+     * Gets the attached children along with their keys.
+     * @return The children and their keys
+     */
     @Override
     public Map<K, V> getChildrenAndKeys() {
         return children;

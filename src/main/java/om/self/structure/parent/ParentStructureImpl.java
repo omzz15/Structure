@@ -1,7 +1,9 @@
 package om.self.structure.parent;
 
+//v1 complete
+
 /**
- * An implementation of {@link ParentStructure} that automatically calls {@link ParentStructure#onParentAttach(Object)} and {@link ParentStructure#onParentDetach(Object)} when a parent is attached or detached.
+ * An implementation of {@link ParentStructure}
  * @param <T> the type of the parent
  * @see ParentStructure
  */
@@ -12,21 +14,21 @@ public class ParentStructureImpl<T> implements ParentStructure<T> {
     private T parent;
 
     /**
-     * default constructor
+     * Default constructor
      */
     public ParentStructureImpl(){}
 
     /**
-     * constructor that automatically attaches the passed in parent
-     * @param parent the parent you want to attach
+     * Constructor that automatically attaches a parent
+     * @param parent the parent being attached
      */
     public ParentStructureImpl(T parent){
         attachParent(parent);
     }
 
     /**
-     * gets the currently attached parent
-     * @return the {@link ParentStructureImpl#parent} variable
+     * Gets the currently attached parent
+     * @return the attached parent, null if no parent is attached
      */
     @Override
     public T getParent() {
@@ -34,8 +36,8 @@ public class ParentStructureImpl<T> implements ParentStructure<T> {
     }
 
     /**
-     * detaches the current parent if one is attached then attaches a parent and calls {@link ParentStructure#onParentAttach(Object)}
-     * @param parent the parent of this structure
+     * Detaches the current parent if one is attached then attaches a parent.
+     * @param parent the parent being attached
      */
     @Override
     public void attachParent(T parent) {
@@ -48,7 +50,7 @@ public class ParentStructureImpl<T> implements ParentStructure<T> {
     }
 
     /**
-     * checks if a parent is attached then detaches it by calling {@link ParentStructure#onParentDetach(Object)} then setting {@link ParentStructureImpl#parent} to null
+     * Detached the parent if one is attached.
      */
     @Override
     public void detachParent(){

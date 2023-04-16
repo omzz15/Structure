@@ -44,6 +44,7 @@ public class ParentStructureImpl<T> implements ParentStructure<T> {
         if(this.parent == parent) return;
 
         detachParent();
+        if(isParentAttached()) return; //in case a check prevents parent from being detached
 
         onParentAttach(parent);
         this.parent = parent;

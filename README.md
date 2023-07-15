@@ -26,7 +26,7 @@ There are multiple ways to use this library, but it was primarily made for Maven
    <dependency>
       <groupId>io.github.omzz15</groupId>
       <artifactId>supplier</artifactId>
-      <version>2.0.7-RELEASE</version>
+      <version>2.1.0-RELEASE</version>
    </dependency>
    ```
 3. Enjoy :)
@@ -35,7 +35,7 @@ There are multiple ways to use this library, but it was primarily made for Maven
 1. Add the mavenCentral() repository to the repositories section(it should be in build.gradle by default)
 2. Add the library to the gradle using:
     ```
-    implementation 'io.github.omzz15:supplier:2.0.7-RELEASE'
+    implementation 'io.github.omzz15:supplier:2.1.0-RELEASE'
     ```
 3. Enjoy :)
 

@@ -5,17 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureWithChecks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureWithChecks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureWithChecks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureWithChecks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleChild.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleParent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructureWithChecks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructureWithChecks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleBidirectional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureWithChecks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureWithChecks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureWithChecks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureWithChecks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/SimpleChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleChild.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +70,7 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/omp/Development/Java/structure&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/omp/Development/Java/supplier&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -72,6 +86,7 @@
       <recent name="C:\Development\Projects\MavenLibrary\Structure\src\main\java\om\self\structure" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="om.self.structure.bidirectional" />
       <recent name="om.self.structure.child" />
     </key>
   </component>
@@ -219,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681414244366</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added checks for attaching and detaching children and parents">
+      <created>1681653880612</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681653880612</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +271,7 @@
     <MESSAGE value="finished initial docs for child and parent packages" />
     <MESSAGE value="finished all initial docs" />
     <MESSAGE value="made it java 8 compatible" />
-    <option name="LAST_COMMIT_MESSAGE" value="made it java 8 compatible" />
+    <MESSAGE value="added checks for attaching and detaching children and parents" />
+    <option name="LAST_COMMIT_MESSAGE" value="added checks for attaching and detaching children and parents" />
   </component>
 </project>

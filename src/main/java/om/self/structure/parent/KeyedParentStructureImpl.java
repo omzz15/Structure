@@ -1,7 +1,5 @@
 package om.self.structure.parent;
 
-//v1 complete
-
 /**
  * An implementation of {@link ParentStructureImpl}
  * @param <K> The type of the key

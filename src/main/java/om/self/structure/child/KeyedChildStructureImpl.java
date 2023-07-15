@@ -2,8 +2,7 @@ package om.self.structure.child;
 
 import java.util.Hashtable;
 import java.util.Map;
-
-//v1 complete
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * An implementation of {@link KeyedChildStructure} that uses a {@link Hashtable} to store the children.
@@ -12,7 +11,7 @@ import java.util.Map;
  * @see KeyedChildStructure
  */
 public class KeyedChildStructureImpl<K, V> implements KeyedChildStructure<K, V> {
-    private final Hashtable<K, V> children = new Hashtable<>();
+    private final ConcurrentHashMap<K, V> children = new ConcurrentHashMap<>();
 
     /**
      * Default constructor

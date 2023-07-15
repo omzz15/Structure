@@ -8,21 +8,37 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-//v1 complete
-
 /**
  * An advanced implementation of both {@link ChildStructure} and {@link ParentStructure} that allows for bidirectional relationships where children and parents can be automatically attached and detached when the structure changes.
  * @param <PARENT> The type of the parent
  * @param <CHILD> The type of the child
  */
 public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHILD>, ParentStructure<PARENT> {
-//    private FailureAction parentAttachFailureAction = FailureAction.IGNORE;
-//    private FailureAction parentDetachFailureAction = FailureAction.IGNORE;
-//    private FailureAction childAttachFailureAction = FailureAction.IGNORE;
-//    private FailureAction childDetachFailureAction = FailureAction.IGNORE;
     
     private PARENT parent;
     private final Set<CHILD> children = new HashSet<>();
+
+    /**
+     * Default constructor that creates a bidirectional node without children or a parent
+     */
+    public BidirectionalStructure() {
+    }
+
+    /**
+     * Creates a bidirectional node with the specified parent attached
+     * @param parent the parent of this node
+     */
+    public BidirectionalStructure(PARENT parent) {
+        attachParent(parent);
+    }
+
+    /**
+     * Creates a bidirectional node with the specified children attached
+     * @param children the children to attach to this node
+     */
+    public BidirectionalStructure(Iterable<CHILD> children) {
+        attachChildren(children);
+    }
 
     /**
      * If the child is not already attached, it attaches the child then attaches itself as a parent to the child if it's the right type.
@@ -34,10 +50,7 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
 
         try{
             if(child instanceof ParentStructure structure) structure.attachParent(this);
-        }
-        catch(Exception e){
-
-        }
+        } catch(Exception e){}
         onChildAttach(child);
     }
 
@@ -74,9 +87,13 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
     public void attachParent(PARENT parent) {
         if(this.parent == parent) return;
 
-        if(isParentAttached()) detachParent();
+        detachParent();
+        if(isParentAttached()) return; //in case the parent didn't detach itself
+
         this.parent = parent;
-        if(parent instanceof ChildStructure structure) structure.attachChild(this);
+        try{
+            if(parent instanceof ChildStructure structure) structure.attachChild(this);
+        } catch(Exception e){}
         onParentAttach(parent);
     }
 
@@ -89,7 +106,7 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
 
         PARENT parent = this.parent;
         this.parent = null;
-        if(parent instanceof ChildStructure structure) structure.detachChild(this);
+        if(parent instanceof ChildStructure structure && structure.isChildAttached(this)) structure.detachChild(this);
         onParentDetach(parent);
     }
 
@@ -101,9 +118,4 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
     public PARENT getParent() {
         return parent;
     }
-
-//    public enum FailureAction{
-//        THROW_EXCEPTION,
-//        IGNORE
-//    }
 }

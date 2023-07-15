@@ -9,8 +9,6 @@ import om.self.structure.parent.ParentStructure;
 import java.util.Hashtable;
 import java.util.Map;
 
-//v1 complete
-
 /**
  * An advanced implementation of both {@link KeyedChildStructure} and {@link KeyedParentStructure} that allows for bidirectional relationships where children and parents can be automatically attached and detached when the structure changes.
  * @param <K> the type of the key (unique identifier)
@@ -21,6 +19,12 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
     private K parentKey;
     private PARENT parent;
     private final Hashtable<K, CHILD> children = new Hashtable<>();
+
+    /**
+     * Creates a keyed bidirectional node without a parent or children
+     */
+    public KeyedBidirectionalStructure() {
+    }
 
     /**
      * If the child is not already attached, it attaches the child then attaches itself as a parent to the child if it's the right type.
@@ -73,7 +77,8 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
         if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
         if(key == parentKey && parent == this.parent) return;
 
-        if(isParentAttached()) detachParent();
+        detachParent();
+        if(isParentAttached()) return; //in case a check prevents parent from being detached
 
         this.parentKey = key;
         this.parent = parent;

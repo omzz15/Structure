@@ -19,18 +19,26 @@ public class SimpleChild {
         parent.attachChild(child2);
         //this will not do anything because child3 is not attached
         parent.detachChild(child3);
-        //this will return the 'hello' and 'world' children
+        //this will attach child3
+        parent.attachChild(child3);
+        //this will return the 'hello', 'world', and '!!!' children
         System.out.println(parent.getChildren());
         //this check uses the contains() method which relies on the equal() method
         //this will return true
         System.out.println(parent.isChildAttached("world"));
+        //this will remove all children
+        parent.detachChildren();
 
         //the output will be:
-        //class java.util.HashSet
+        //[]
         //Attaching child: hello
         //Attaching child: world
-        //[world, hello]
+        //Attaching child: !!!
+        //[!!!, world, hello]
         //true
+        //Detaching child: !!!
+        //Detaching child: world
+        //Detaching child: hello
     }
 }
 

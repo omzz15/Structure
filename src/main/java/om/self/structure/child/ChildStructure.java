@@ -1,6 +1,9 @@
 package om.self.structure.child;
 
-//v1 complete
+import javax.swing.text.html.HTMLDocument;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * An extension of {@link ChildContainer} that adds the ability to attach and detach children, plus methods that get called on attach and detach.
@@ -48,6 +51,7 @@ public interface ChildStructure<T> extends ChildContainer<T> {
 
     /**
      * Detaches all children by calling {@link ChildStructure#detachChild(Object)}
+     * @implNote To use the default implementation of this method, the set used to store the children must be concurrent
      */
     @Override
     default void detachChildren() {

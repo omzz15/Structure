@@ -11,7 +11,7 @@ A simple java library that provides a way to manage trees of children and parent
 - Use generics to keep code efficient and restrict what can be a child/parent.
 
 ## Future Additions
-- System to restrict what can be added to a structure(adding parent/child) based on conditions.
+- More examples
 - Community Requests(your input is always important)
 
 # How To Install
@@ -29,6 +29,7 @@ There are multiple ways to use this library, but it was primarily made for Maven
       <version>2.0.7-RELEASE</version>
    </dependency>
    ```
+3. Enjoy :)
 
 ## To Install with Gradle
 1. Add the mavenCentral() repository to the repositories section(it should be in build.gradle by default)
@@ -36,8 +37,7 @@ There are multiple ways to use this library, but it was primarily made for Maven
     ```
     implementation 'io.github.omzz15:supplier:2.0.7-RELEASE'
     ```
-Enjoy :)
+3. Enjoy :)
 
 # How To Use
-Check examples
-
+Check examples [here](./src/test/java/examples)

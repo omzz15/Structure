@@ -1,7 +1,5 @@
 package om.self.structure.parent;
 
-//v1 complete
-
 /**
  * An implementation of {@link ParentStructure}
  * @param <T> the type of the parent

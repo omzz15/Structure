@@ -1,7 +1,5 @@
 package om.self.structure.parent;
 
-//v1 complete
-
 /**
  * An extension of {@link ParentContainer} that adds the ability to attach a parent with a key(for identification), plus methods that get called on attach and detach.
  * @param <K> the type of the key

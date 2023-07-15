@@ -3,8 +3,6 @@ package om.self.structure.child;
 import java.util.Collection;
 import java.util.Map;
 
-//v1 complete
-
 /**
  * An extension of {@link ChildContainer} that uses keys for identification and adds the ability to attach and detach children, plus methods that get called on attach and detach.
  * @param <K> the type of the key used to identify itself to its parent
@@ -55,6 +53,7 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
 
     /**
      * Detaches all attached children
+     * @implNote To use the default implementation of this method, the hashmap used to store the children must be concurrent or {@link KeyedChildStructure#getChildKeys()} must return a copy of the keys and not a reference(pointer)
      */
     @Override
     default void detachChildren() {
@@ -80,7 +79,7 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
     /**
      * Gets the attached children along with their keys.
      * @return The children and their keys
-     * @implNote In order for default implementations of methods such as {@link KeyedChildStructure#detachChildren()} to work this must return a reference(pointer) not a copy
+     * @implNote In order for default implementations of methods such as {@link KeyedChildStructure#detachChild(Object)} to work this must return a reference(pointer) not a copy
      */
     Map<K, V> getChildrenAndKeys();
 

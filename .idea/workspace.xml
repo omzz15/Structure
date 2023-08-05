@@ -4,32 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructureWithChecks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructureWithChecks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleBidirectional.java" afterDir="false" />
+    <list default="true" id="52ffd5ca-1666-4425-bf34-784c474db247" name="Changes" comment="added checks for attaching and detaching children and parents">
+      <change afterPath="$PROJECT_DIR$/src/test/java/examples/AdvancedBidirectional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/NamedStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/BidirectionalStructure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/ChildStructureWithChecks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/bidirectional/KeyedBidirectionalStructureWithChecks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/child/KeyedChildStructureWithChecks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/KeyedParentStructureWithChecks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureWithChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/om/self/structure/parent/ParentStructureWithChecks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/SimpleBidirectional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleBidirectional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/examples/SimpleChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleChild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/examples/SimpleParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/examples/SimpleParent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +41,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Cdi2271gNRCvZVFvhjwwudFycr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -90,7 +80,12 @@
       <recent name="om.self.structure.child" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Example">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn maven.plugin.validation" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.structure [deploy]">
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-18-openjdk-amd64" />
       <option name="MAIN_CLASS_NAME" value="Example" />
@@ -111,6 +106,36 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="structure [deploy]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="deploy" />
+                <option value="-Dpgp.passphrase=wasdqe123!@#WASD" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
@@ -244,6 +269,9 @@
     <option name="localTasksCounter" value="17" />
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:podman" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -273,5 +301,26 @@
     <MESSAGE value="made it java 8 compatible" />
     <MESSAGE value="added checks for attaching and detaching children and parents" />
     <option name="LAST_COMMIT_MESSAGE" value="added checks for attaching and detaching children and parents" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/examples/AdvancedBidirectional.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/examples/AdvancedBidirectional.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="parent.parentKey" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

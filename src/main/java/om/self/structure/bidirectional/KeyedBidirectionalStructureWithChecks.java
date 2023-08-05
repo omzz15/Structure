@@ -12,7 +12,9 @@ import java.util.List;
  * @param <K>  the type of the key used to identify children/parents
  */
 public class KeyedBidirectionalStructureWithChecks<K, PARENT, CHILD> extends KeyedBidirectionalStructure<K, PARENT, CHILD> {
+    //A list of all the checks that must be passed before a parent can be attached
     private final List<Utils.KeyedCheck<K,PARENT>> parentChecks = new LinkedList<>();
+    //A list of all the checks that must be passed before a child can be attached
     private final List<Utils.KeyedCheck<K,CHILD>> childChecks = new LinkedList<>();
 
     /**
@@ -100,16 +102,16 @@ public class KeyedBidirectionalStructureWithChecks<K, PARENT, CHILD> extends Key
     }
 
     /**
-     * If the child is not already attached, it attaches the child then attaches itself as a parent to the child if it's the right type.
-     *
+     * Makes sure all {@link KeyedBidirectionalStructureWithChecks#childChecks} pass before attaching the child using {@link KeyedBidirectionalStructure#attachChild(Object, Object)}.
      * @param child The child being attached
+     * @param customParentKey if not null, it will try to use this parameter as the key for attaching this object as the parent to the child else it will just use the key parameter
      */
     @Override
-    public void attachChild(K key, CHILD child) {
+    public void attachChild(K key, CHILD child, K customParentKey){
         for(Utils.KeyedCheck<K,CHILD> check : childChecks)
             if(!check.apply(key, child, Utils.Action.ATTACH)) return;
 
-        super.attachChild(key, child);
+        super.attachChild(key, child, customParentKey);
     }
 
     /**
@@ -129,23 +131,25 @@ public class KeyedBidirectionalStructureWithChecks<K, PARENT, CHILD> extends Key
     }
 
     /**
-     * Detaches the previous parent, then attaches the new parent and itself as a child to the parent if it is the right type.
-     *
+     * Makes sure all {@link KeyedBidirectionalStructureWithChecks#parentChecks} pass before attaching the parent using {@link KeyedBidirectionalStructure#attachParent(Object, Object, Object)}
+     * @param key the key associated with the parent
      * @param parent the parent being attached
+     * @param customChildKey if not null, it will try to use this parameter as the key for attaching this object as the child to the parent else it will just use the key parameter
      */
     @Override
-    public void attachParent(K key, PARENT parent) {
+    public void attachParent(K key, PARENT parent, K customChildKey) {
         for(Utils.KeyedCheck<K,PARENT> check : parentChecks)
             if(!check.apply(key, parent, Utils.Action.ATTACH)) return;
 
-        super.attachParent(key, parent);
+        super.attachParent(key, parent, customChildKey);
     }
 
     /**
-     * Detaches the parent then detaches itself from the parents children if it is the right type.
+     * Check to make sure all parent checks are good them detaches the parent then detaches itself from the parent if it is the right type.
+     * @param customChildName if not null, it will try to use this parameter to detach this object as a child from the parent else it will just use the parentKey variable
      */
     @Override
-    public void detachParent() {
+    public void detachParent(K customChildName) {
         if(!isParentAttached()) return;
 
         K k = getParentKey();
@@ -153,6 +157,6 @@ public class KeyedBidirectionalStructureWithChecks<K, PARENT, CHILD> extends Key
         for(Utils.KeyedCheck<K,PARENT> check : parentChecks)
             if(!check.apply(k, p, Utils.Action.DETACH)) return;
 
-        super.detachParent();
+        super.detachParent(customChildName);
     }
 }

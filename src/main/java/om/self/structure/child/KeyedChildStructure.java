@@ -2,6 +2,7 @@ package om.self.structure.child;
 
 import java.util.Collection;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * An extension of {@link ChildContainer} that uses keys for identification and adds the ability to attach and detach children, plus methods that get called on attach and detach.
@@ -20,6 +21,26 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
         if(getChildrenAndKeys().put(key, child) == child) return;
 
         onChildAttach(key, child);
+    }
+
+    /**
+     * remaps a child key to a new key while optionally calling the attach and detach methods.
+     * @param oldKey the key of the child you want to move to a new key
+     * @param newKey the new key you want to move the child to
+     * @param useAttachDetach whether to call the attach and detach methods which invoke onAttach and onDetach or could have custom logic
+     */
+    default void renameChild(K oldKey, K newKey, boolean useAttachDetach){
+        if(!isChildKeyAttached(oldKey) || isChildKeyAttached(newKey)) return;
+
+        if(useAttachDetach) {
+            V child = getChildrenAndKeys().get(oldKey);
+            detachChild(oldKey);
+            if(isChildKeyAttached(oldKey)) return; //this means the detach method was overridden and didn't detach the child
+            attachChild(newKey, child);
+        } else {
+            V child = getChildrenAndKeys().remove(oldKey);
+            getChildrenAndKeys().put(newKey, child);
+        }
     }
 
     /**
@@ -90,6 +111,15 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
      */
     default V getChild(K key){
         return getChildrenAndKeys().get(key);
+    }
+
+    /**
+     * Gets a child associated with a specific key
+     * @param key the key of the child
+     * @return will return the child or an empty optional if the key is not found
+     */
+    default Optional<V> getChildSafe(K key){
+        return Optional.ofNullable(getChild(key));
     }
 
     /**

@@ -6,7 +6,7 @@
 
     <groupId>io.github.omzz15</groupId>
     <artifactId>structure</artifactId>
-    <version>2.2.0-RELEASE</version>
+    <version>2.2.1-RELEASE</version>
 
     <build>
         <plugins>
@@ -86,7 +86,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.5</version>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>

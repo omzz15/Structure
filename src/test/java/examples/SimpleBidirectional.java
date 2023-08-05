@@ -1,7 +1,8 @@
 package examples;
 
 import om.self.structure.bidirectional.BidirectionalStructure;
-import om.self.structure.child.KeyedChildStructureImpl;
+
+//This example gives a basic use of a bidirectional structure using the BidirectionalStructure class
 
 public class SimpleBidirectional {
     public static void main(String[] args) {

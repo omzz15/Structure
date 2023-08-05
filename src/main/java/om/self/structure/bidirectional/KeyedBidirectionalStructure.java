@@ -115,6 +115,8 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
      * @param key the key associated with the parent
      * @param parent the parent being attached
      * @param customChildName if not null, it will try to use this parameter to attach this object as a child to the parent else it will just use the key parameter
+     *
+     * @implNote if you use a customChildKey, you will need to pass in the same key when detaching the parent in order to detach this object from the parents children
      */
     public void attachParent(K key, PARENT parent, K customChildName) {
         if(key == null) throw new IllegalArgumentException("the key argument can not be null!");

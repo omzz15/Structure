@@ -1,10 +1,5 @@
 package om.self.structure.child;
 
-import javax.swing.text.html.HTMLDocument;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-
 /**
  * An extension of {@link ChildContainer} that adds the ability to attach and detach children, plus methods that get called on attach and detach.
  * @param <T> the type of the children
@@ -38,7 +33,7 @@ public interface ChildStructure<T> extends ChildContainer<T> {
     default void detachChild(T child){
         if(getChildren().remove(child))
             onChildDetach(child);
-    };
+    }
 
     /**
      * Detaches multiple children by calling {@link ChildStructure#detachChild(Object)}.

@@ -3,6 +3,7 @@ package om.self.structure.bidirectional;
 import om.self.structure.child.ChildStructure;
 import om.self.structure.parent.ParentContainer;
 import om.self.structure.parent.ParentStructure;
+import static om.self.structure.Utils.tryFunction;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -48,9 +49,9 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
     public void attachChild(CHILD child) {
         if(!children.add(child)) return;
 
-        try{
-            if(child instanceof ParentStructure structure) structure.attachParent(this);
-        } catch(Exception e){}
+        if(child instanceof ParentStructure)
+            tryFunction(() -> ((ParentStructure) child).attachParent(this));
+
         onChildAttach(child);
     }
 
@@ -62,7 +63,8 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
     public void detachChild(CHILD child) {
         if(!children.remove(child)) return;
 
-        if(child instanceof ParentContainer<?> container) {
+        if(child instanceof ParentContainer<?>) {
+            ParentContainer<?> container = (ParentContainer<?>) child;
             if (container.getParent() == this)
                 container.detachParent();
         }
@@ -91,9 +93,10 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
         if(isParentAttached()) return; //in case the parent didn't detach itself
 
         this.parent = parent;
-        try{
-            if(parent instanceof ChildStructure structure) structure.attachChild(this);
-        } catch(Exception e){}
+
+        if(parent instanceof ChildStructure)
+            tryFunction(() -> ((ChildStructure)parent).attachChild(this));
+
         onParentAttach(parent);
     }
 
@@ -106,7 +109,9 @@ public class BidirectionalStructure<PARENT, CHILD> implements ChildStructure<CHI
 
         PARENT parent = this.parent;
         this.parent = null;
-        if(parent instanceof ChildStructure structure && structure.isChildAttached(this)) structure.detachChild(this);
+        if(parent instanceof ChildStructure)
+            tryFunction(() -> ((ChildStructure)parent).detachChild(this));
+
         onParentDetach(parent);
     }
 

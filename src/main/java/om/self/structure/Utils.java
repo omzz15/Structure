@@ -38,4 +38,17 @@ public class Utils {
         ATTACH,
         DETACH
     }
+
+    public static void tryFunction(Runnable action, Runnable onSuccess, Runnable onFail){
+        try{
+            action.run();
+            onSuccess.run();
+        } catch (Exception e){
+            onFail.run();
+        }
+    }
+
+    public static void tryFunction(Runnable action){
+        tryFunction(action, () -> {}, () -> {});
+    }
 }

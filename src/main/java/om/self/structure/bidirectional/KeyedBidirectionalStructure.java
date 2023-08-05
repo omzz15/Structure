@@ -8,7 +8,8 @@ import om.self.structure.parent.ParentStructure;
 
 import java.util.Hashtable;
 import java.util.Map;
-import java.util.Objects;
+
+import static om.self.structure.Utils.tryFunction;
 
 /**
  * An advanced implementation of both {@link KeyedChildStructure} and {@link KeyedParentStructure} that allows for bidirectional relationships where children and parents can be automatically attached and detached when the structure changes.
@@ -52,24 +53,29 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
         if(key == null) throw new IllegalArgumentException("the key argument can not be null!");
         if(children.put(key, child) == child) return;
 
-        if(child instanceof KeyedBidirectionalStructure structure)
+        if(child instanceof KeyedBidirectionalStructure) {
+            KeyedBidirectionalStructure structure = (KeyedBidirectionalStructure) child;
             tryFunction(
                     () -> structure.attachParent(
-                            Objects.requireNonNullElse(customParentKey, key),
+                            customParentKey == null ? key : customParentKey,
                             this,
                             key
                     )
             );
-        else if(child instanceof KeyedParentStructure structure) {
+        }
+        else if(child instanceof KeyedParentStructure) {
+            KeyedParentStructure structure = (KeyedParentStructure) child;
             tryFunction(
                     () -> structure.attachParent(
-                            Objects.requireNonNullElse(customParentKey, key),
+                            customParentKey == null ? key : customParentKey,
                             this
                     )
             );
         }
-        else if(child instanceof ParentStructure structure) tryFunction(() -> structure.attachParent(this));
-
+        else if(child instanceof ParentStructure) {
+            ParentStructure structure = (ParentStructure) child;
+            tryFunction(() -> structure.attachParent(this));
+        }
         onChildAttach(key, child);
     }
 
@@ -82,10 +88,11 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
         if(!isChildKeyAttached(key)) return;
 
         CHILD child = children.remove(key);
-        if(child instanceof ParentContainer<?> container)
+        if(child instanceof ParentContainer<?>) {
+            ParentContainer<?> container = (ParentContainer<?>) child;
             if (container.getParent() == this)
                 container.detachParent();
-
+        }
         onChildDetach(key, child);
     }
 
@@ -128,22 +135,29 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
         this.parentKey = key;
         this.parent = parent;
 
-        if(parent instanceof KeyedBidirectionalStructure structure)
+        if(parent instanceof KeyedBidirectionalStructure) {
+            KeyedBidirectionalStructure structure = (KeyedBidirectionalStructure) parent;
             tryFunction(
                     () -> structure.attachChild(
-                            Objects.requireNonNullElse(customChildName, key),
+                            customChildName == null ? key : customChildName,
                             this,
                             key
                     )
             );
-        else if(parent instanceof KeyedChildStructure structure) {
+        }
+        else if(parent instanceof KeyedChildStructure) {
+            KeyedChildStructure structure = (KeyedChildStructure) parent;
             tryFunction(
-                    () -> structure.attachChild(Objects.requireNonNullElse(customChildName, key), this)
+                    () -> structure.attachChild(
+                            customChildName == null ? key : customChildName,
+                            this
+                    )
             );
         }
-        else if(parent instanceof ChildStructure structure)
+        else if(parent instanceof ChildStructure) {
+            ChildStructure structure = (ChildStructure) parent;
             tryFunction(() -> structure.attachChild(this));
-
+        }
         onParentAttach(key, parent);
     }
 
@@ -154,9 +168,15 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
     public void detachParent(K customChildName) {
         if(!isParentAttached()) return;
 
-        if(parent instanceof KeyedChildStructure structure) tryFunction(() -> structure.detachChild(Objects.requireNonNullElse(customChildName, parentKey)));
-        else if(parent instanceof ChildStructure structure) tryFunction(() -> structure.detachChild(this));
-
+        if(parent instanceof KeyedChildStructure) {
+            KeyedChildStructure structure = (KeyedChildStructure) parent;
+            tryFunction(() -> structure.detachChild(
+                    customChildName == null ? parentKey : customChildName
+            ));
+        }else if(parent instanceof ChildStructure) {
+            ChildStructure structure = (ChildStructure) parent;
+            tryFunction(() -> structure.detachChild(this));
+        }
         onParentDetach(parentKey, parent);
         parentKey = null;
         parent = null;
@@ -170,19 +190,6 @@ public class KeyedBidirectionalStructure<K, PARENT, CHILD> implements KeyedChild
     @Override
     public void detachParent() {
         detachParent(null);
-    }
-
-    private void tryFunction(Runnable action, Runnable onSuccess, Runnable onFail){
-        try{
-            action.run();
-            onSuccess.run();
-        } catch (Exception e){
-            onFail.run();
-        }
-    }
-
-    private void tryFunction(Runnable action){
-        tryFunction(action, () -> {}, () -> {});
     }
 
     /**

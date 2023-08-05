@@ -124,17 +124,27 @@ class Folder extends KeyedBidirectionalStructureWithChecks<String, Folder, FileS
     }
 
     private StringBuilder getTree(String tab, int tabs){
-        StringBuilder tree = new StringBuilder(tab.repeat(tabs) + getName() + "\n");
+        StringBuilder tree = new StringBuilder(repeat(tab, tabs) + getName() + "\n");
 
         for(FileSystemObject child : getChildren()){
-            if(child instanceof Folder folder){
+            if(child instanceof Folder){
+                Folder folder = (Folder) child;
                 tree.append(folder.getTree(tab, tabs + 1));
-            }else if(child instanceof File file){
-                tree.append(tab.repeat(tabs + 1)).append(file.getName()).append("\n");
+            }else if(child instanceof File){
+                File file = (File) child;
+                tree.append(repeat(tab, tabs + 1)).append(file.getName()).append("\n");
             }
         }
 
         return tree;
+    }
+
+    private String repeat(String str, int times){
+        StringBuilder builder = new StringBuilder();
+        for(int i = 0; i < times; i++){
+            builder.append(str);
+        }
+        return builder.toString();
     }
 }
 

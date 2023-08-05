@@ -9,7 +9,7 @@ public class Example {
         Test t3 = new Test("3");
         Test t4 = new Test("4");
 
-        ParentStructureWithChecks<Test> child = new ParentStructureWithChecks<>(){
+        ParentStructureWithChecks<Test> child = new ParentStructureWithChecks<Test>(){
             @Override
             public void onParentAttach(Test parent) {
                 System.out.println("parent '" + parent.getName() + "' attached");

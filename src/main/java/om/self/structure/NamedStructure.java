@@ -1,7 +1,5 @@
 package om.self.structure;
 
-//v1 complete
-
 /**
  * Signals that something has a unique name that can be used as a key in keyed structures.
  * @param <K> The type of the key

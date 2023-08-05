@@ -1,10 +1,10 @@
 package om.self.structure.child;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-
-//v1 complete
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * An implementation of {@link ChildStructure} that uses a {@link HashSet} to store the children.
@@ -15,7 +15,7 @@ public class ChildStructureImpl<T> implements ChildStructure<T> {
     /**
      * The children that are attached.
      */
-    private final Set<T> children = new HashSet<>();
+    private final Set<T> children = ConcurrentHashMap.newKeySet();
 
     /**
      * Default constructor

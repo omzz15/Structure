@@ -1,7 +1,5 @@
 package om.self.structure.parent;
 
-//v1 complete
-
 /**
  * An implementation of {@link ParentStructureImpl}
  * @param <K> The type of the key
@@ -37,6 +35,7 @@ public class KeyedParentStructureImpl<K, V> implements KeyedParentStructure<K, V
         if(key == parentKey && this.parent == parent) return;
 
         detachParent();
+        if(isParentAttached()) return; //in case a check prevents parent from being detached
 
         onParentAttach(key, parent);
         this.parentKey = key;

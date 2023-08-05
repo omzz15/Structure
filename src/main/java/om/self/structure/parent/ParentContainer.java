@@ -1,7 +1,5 @@
 package om.self.structure.parent;
 
-//v1 complete
-
 /**
  * Low level interface that indicates something contains a parent. The functionality provided by this interface is limited to getting the parent, detaching the parent, and checking if a parent is attached. This is meant to be used as a base for further implementations such as {@link ParentStructure} or {@link KeyedParentStructure}
  * @param <T> The type of the parent

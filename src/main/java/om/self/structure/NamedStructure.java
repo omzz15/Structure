@@ -12,9 +12,10 @@ public interface NamedStructure<K>{
     K getName();
 
     /**
-     * Sets the name of whatever implements this.
+     * Sets the name of whatever implements this. <br>
+     * Implementation Note:
+     * This method could not do anything if, for example, this was implemented by something with a final name
      * @param name the new name to set
-     * @implNote This method could not do anything if, for example, this was implemented by something with a final name
      */
     void setName(K name);
 }

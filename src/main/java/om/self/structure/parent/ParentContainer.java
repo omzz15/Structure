@@ -8,8 +8,9 @@ package om.self.structure.parent;
  */
 public interface ParentContainer<T> {
     /**
-     * Detaches the parent
-     * @implNote call onParentDetach if your implementation has it (ex: {@link ParentStructure#onParentDetach(Object)})
+     * Detaches the parent <br>
+     * Implementation Note: call onParentDetach if your implementation has it
+     * (ex: {@link ParentStructure#onParentDetach(Object)})
      */
     void detachParent();
 

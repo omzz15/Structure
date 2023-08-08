@@ -10,9 +10,9 @@ import java.util.Collection;
  */
 public interface ChildContainer<T> {
     /**
-     * Gets all attached children
+     * Gets all attached children <br>
+     * Note: In order for the default implementations of methods such as {@link ChildContainer#detachChildren()} to work, this must return a reference(pointer) to the child collection(not a copy).
      * @return Attached children
-     * @implNote In order for the default implementations of methods such as {@link ChildContainer#detachChildren()} to work, this must return a reference(pointer) to the child collection(not a copy).
      */
     Collection<T> getChildren();
 

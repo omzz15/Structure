@@ -1,11 +1,11 @@
-/*
-This is an example of how to create a custom class that can have a parent
-It also demonstrates what needs to happen in each method
-*/
-
+package examples;
 
 import om.self.structure.parent.ParentStructure;
 
+/**
+ * This is an example of how to create a custom class that can have a parent
+ * It also demonstrates what needs to happen in each method
+ */
 public class CustomParentExample{
     public static void main(String[] args) {
         CustomTest pcm = new CustomTest();

@@ -1,9 +1,9 @@
 package examples;
 
 import om.self.structure.child.ChildStructureImpl;
-
-//This example just gives a basic use of a child structure using the ChildStructureImpl class
-
+/**
+ * This example just gives a basic use of a child structure using the ChildStructureImpl class
+ */
 public class SimpleChild {
 
     public static void main(String[] args) {

@@ -70,11 +70,11 @@ public class KeyedChildStructureWithChecks<K, V> extends KeyedChildStructureImpl
     }
 
     /**
-     * Attaches a child with a key.
+     * Attaches a child with a key. <br>
+     * Implementation note: This method should call {@link KeyedChildStructure#onChildAttach(Object, Object)}
      *
      * @param key   the key associated with the child
      * @param child the child being attached
-     * @implNote This method should call {@link KeyedChildStructure#onChildAttach(Object, Object)}
      */
     @Override
     public void attachChild(K key, V child) {
@@ -85,10 +85,10 @@ public class KeyedChildStructureWithChecks<K, V> extends KeyedChildStructureImpl
     }
 
     /**
-     * Detaches a child based on a key.
+     * Detaches a child based on a key. <br>
+     * Implementation note: This method should call {@link KeyedChildStructure#onChildDetach(Object, Object)}
      *
      * @param key the key of the child being detached
-     * @implNote make sure this method calls {@link KeyedChildStructure#onChildDetach(Object, Object)}
      */
     @Override
     public void detachChild(K key) {

@@ -12,10 +12,10 @@ import java.util.Optional;
  */
 public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
     /**
-     * Attaches a child with a key.
+     * Attaches a child with a key. <br>
+     * Implementation Note: This method should call {@link KeyedChildStructure#onChildAttach(Object,Object)}
      * @param key the key associated with the child
      * @param child the child being attached
-     * @implNote This method should call {@link KeyedChildStructure#onChildAttach(Object,Object)}
      */
     default void attachChild(K key, V child){
         if(getChildrenAndKeys().put(key, child) == child) return;
@@ -53,9 +53,9 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
     }
 
     /**
-     * Detaches a child based on a key.
+     * Detaches a child based on a key. <br>
+     * Implementation Note: This method should call {@link KeyedChildStructure#onChildDetach(Object,Object)}
      * @param key the key of the child being detached
-     * @implNote make sure this method calls {@link KeyedChildStructure#onChildDetach(Object,Object)}
      */
     default void detachChild(K key){
         if(!isChildKeyAttached(key)) return;
@@ -73,8 +73,10 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
     }
 
     /**
-     * Detaches all attached children
-     * @implNote To use the default implementation of this method, the hashmap used to store the children must be concurrent or {@link KeyedChildStructure#getChildKeys()} must return a copy of the keys and not a reference(pointer)
+     * Detaches all attached children <br>
+     * Implementation Note: To use the default implementation of this method,
+     * the hashmap used to store the children must be concurrent
+     * or {@link KeyedChildStructure#getChildKeys()} must return a copy of the keys and not a reference(pointer)
      */
     @Override
     default void detachChildren() {
@@ -98,9 +100,11 @@ public interface KeyedChildStructure<K, V> extends ChildContainer<V> {
     }
 
     /**
-     * Gets the attached children along with their keys.
+     * Gets the attached children along with their keys. <br>
+     * Implementation Note:
+     * In order for default implementations of methods such as {@link KeyedChildStructure#detachChild(Object)} to work this must return a reference(pointer)
+     * not a copy
      * @return The children and their keys
-     * @implNote In order for default implementations of methods such as {@link KeyedChildStructure#detachChild(Object)} to work this must return a reference(pointer) not a copy
      */
     Map<K, V> getChildrenAndKeys();
 

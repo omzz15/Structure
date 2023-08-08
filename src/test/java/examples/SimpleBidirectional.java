@@ -2,9 +2,10 @@ package examples;
 
 import om.self.structure.bidirectional.BidirectionalStructure;
 
-//This example gives a basic use of a bidirectional structure using the BidirectionalStructure class
-
-public class SimpleBidirectional {
+/**
+ * This example gives a basic use of a bidirectional structure using the BidirectionalStructure class
+ */
+ public class SimpleBidirectional {
     public static void main(String[] args) {
         Bidirectional first = new Bidirectional("first");
         Bidirectional second = new Bidirectional("second");

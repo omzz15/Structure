@@ -2,8 +2,9 @@ package examples;
 
 import om.self.structure.parent.ParentStructureImpl;
 
-//This example just gives a basic use of a parent structure using the ParentStructureImpl class
-
+/**
+ * This example just gives a basic use of a parent structure using the ParentStructureImpl class
+ */
 public class SimpleParent {
     public static void main(String[] args) {
         Child child = new Child();

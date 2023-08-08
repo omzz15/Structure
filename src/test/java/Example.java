@@ -1,7 +1,9 @@
-import om.self.structure.Utils;
 import om.self.structure.bidirectional.BidirectionalStructure;
 import om.self.structure.parent.ParentStructureWithChecks;
 
+/**
+ * This is just a random playground for testing things that is not part of the library.
+ */
 public class Example {
     public static void main(String[] args) {
         Test t1 = new Test("1");

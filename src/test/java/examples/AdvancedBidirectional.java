@@ -1,12 +1,13 @@
 package examples;
 
-//This is a more advanced example of a bidirectional structure that include some extra functionality
-
 import om.self.structure.NamedStructure;
 import om.self.structure.Utils;
 import om.self.structure.bidirectional.KeyedBidirectionalStructureWithChecks;
 import om.self.structure.parent.KeyedParentStructureImpl;
 
+/**
+ * This is a more advanced example of a bidirectional structure that includes some extra functionality
+ */
 public class AdvancedBidirectional {
     public static void main(String[] args) {
 

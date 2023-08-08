@@ -7,9 +7,9 @@ package om.self.structure.child;
  */
 public interface ChildStructure<T> extends ChildContainer<T> {
     /**
-     * Attaches a child.
+     * Attaches a child. <br>
+     * Implementation Note: This method should call {@link ChildStructure#onChildAttach(Object)}
      * @param child The child being attached
-     * @implNote This method should call {@link ChildStructure#onChildAttach(Object)}
      */
     default void attachChild(T child){
         if(getChildren().add(child))
@@ -26,9 +26,9 @@ public interface ChildStructure<T> extends ChildContainer<T> {
     }
 
     /**
-     * Detaches a child.
+     * Detaches a child. <br>
+     * Implementation Note: This method should call {@link ChildStructure#onChildDetach(Object)}
      * @param child The child being detached
-     * @implNote This method should call {@link ChildStructure#onChildDetach(Object)}
      */
     default void detachChild(T child){
         if(getChildren().remove(child))
@@ -45,8 +45,8 @@ public interface ChildStructure<T> extends ChildContainer<T> {
     }
 
     /**
-     * Detaches all children by calling {@link ChildStructure#detachChild(Object)}
-     * @implNote To use the default implementation of this method, the set used to store the children must be concurrent
+     * Detaches all children by calling {@link ChildStructure#detachChild(Object)} <br>
+     * Implementation Note: To use the default implementation of this method, the set used to store the children must be concurrent
      */
     @Override
     default void detachChildren() {

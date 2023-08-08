@@ -6,8 +6,8 @@ It also demonstrates automatic parent detaching and how to use the onParent_____
 
 import om.self.structure.parent.ParentStructureImpl;
 
-/*
-Simple class that can have a parent
+/**
+ * Simple class that can have a parent
  */
 public class ParentExample extends ParentStructureImpl<Object> {
     public static void main(String[] args) {

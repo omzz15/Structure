@@ -7,9 +7,9 @@ package om.self.structure.parent;
  */
 public interface ParentStructure<T> extends ParentContainer<T> {
     /**
-     * Attaches a parent
+     * Attaches a parent <br>
+     * Implementation Note: This method should call {@link ParentStructure#onParentAttach(Object)}
      * @param parent the parent being attached
-     * @implNote This method should call {@link ParentStructure#onParentAttach(Object)}
      */
     void attachParent(T parent);
 

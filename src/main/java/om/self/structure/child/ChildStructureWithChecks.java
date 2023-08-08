@@ -68,10 +68,9 @@ public class ChildStructureWithChecks<T> extends ChildStructureImpl<T> {
     }
 
     /**
-     * Attaches a child.
-     *
+     * Attaches a child. <br>
+     * Implementation Note: This method should call {@link ChildStructure#onChildAttach(Object)}
      * @param child The child being attached
-     * @implNote This method should call {@link ChildStructure#onChildAttach(Object)}
      */
     @Override
     public void attachChild(T child) {
@@ -82,10 +81,10 @@ public class ChildStructureWithChecks<T> extends ChildStructureImpl<T> {
     }
 
     /**
-     * Detaches a child.
+     * Detaches a child. <br>
+     * Implementation Note: This method should call {@link ChildStructure#onChildDetach(Object)}
      *
      * @param child The child being detached
-     * @implNote This method should call {@link ChildStructure#onChildDetach(Object)}
      */
     @Override
     public void detachChild(T child) {

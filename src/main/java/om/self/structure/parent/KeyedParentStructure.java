@@ -8,10 +8,10 @@ package om.self.structure.parent;
  */
 public interface KeyedParentStructure<K, V> extends ParentContainer<V> {
     /**
-     * Attaches a parent.
+     * Attaches a parent. <br>
+     * Implementation Note: This method should call {@link ParentStructure#onParentAttach(Object)}
      * @param key the key associated with the parent
      * @param parent the parent being attached
-     * @implNote This method should call {@link ParentStructure#onParentAttach(Object)}
      */
     void attachParent(K key, V parent);
 

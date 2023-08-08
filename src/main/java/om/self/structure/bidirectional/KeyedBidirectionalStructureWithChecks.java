@@ -131,12 +131,15 @@ public class KeyedBidirectionalStructureWithChecks<K, PARENT, CHILD> extends Key
     }
 
     /**
-     * Makes sure all {@link KeyedBidirectionalStructureWithChecks#parentChecks} pass before attaching the parent using {@link KeyedBidirectionalStructure#attachParent(Object, Object, Object)}
+     * Makes sure all {@link KeyedBidirectionalStructureWithChecks#parentChecks} pass
+     * before attaching the parent using {@link KeyedBidirectionalStructure#attachParent(Object, Object, Object)} <br>
+     * Implementation Note:
+     * if you use a customChildKey,
+     * you will need
+     * to pass in the same key when detaching the parent in order to detach this object from the parent's children
      * @param key the key associated with the parent
      * @param parent the parent being attached
      * @param customChildKey if not null, it will try to use this parameter as the key for attaching this object as the child to the parent else it will just use the key parameter
-     *
-     * @implNote if you use a customChildKey, you will need to pass in the same key when detaching the parent in order to detach this object from the parents children
      */
     @Override
     public void attachParent(K key, PARENT parent, K customChildKey) {
